@@ -3,7 +3,7 @@ template: index-page
 slug: /
 title: 4N6 SHETTY
 tagline: TECH BLOG
-featuredImage: /assets/4-1-.png
+featuredImage: /assets/4-2-.png
 cta:
   ctaText: Know more
   ctaLink: /about
