@@ -3,7 +3,7 @@ template: about-page
 slug: /about
 title: About Me
 ---
-#### `> Whoami`
+<span style="color:red"> **`> Whoami`** </span>.
 
 `Mozshetty | DC FAN | Anime Fan | GCIH`
 
