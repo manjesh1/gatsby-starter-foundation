@@ -3,7 +3,7 @@ template: about-page
 slug: /about
 title: About Me
 ---
-```
+```csharp
 Whoami@ Mozhsettt
 djkdkdk
 djhdjnjd
