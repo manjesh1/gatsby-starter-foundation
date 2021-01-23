@@ -13,4 +13,4 @@ title: About Me
 
 #### `> Help`
 
-`4n6shetty@protonmail.com`
+`4n6shetty(at)protonmail(dot)com`
