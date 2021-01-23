@@ -15,4 +15,4 @@ title: About Me
 
 `4n6shetty(at)protonmail(dot)com`
 
-**`> Echo `**       `4n6shetty(at)protonmail(dot)com`
+**`> Echo  `**  `"report for any plagiarism/copyright content" > 4n6shetty(at)protonmail(dot)com`
