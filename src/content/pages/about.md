@@ -13,12 +13,11 @@ title: About Me
 
 #### `> Help`
 
-`4n6shetty(at)protonmail(dot)com`
+`4n6shetty(at)pm(dot)me`
 
 `Nickname: Your_IRC_name |
 Chat Server: irc.freenode.net | Channel Name: #4n6shetty |
 Chat Server Port: 6697 |
 Server Password: [blank]`
 
-
-**`> Echo  `**  `"report for any plagiarism/copyright content" > 4n6shetty(at)protonmail(dot)com`
+**`> Echo`**  `"report for any plagiarism/copyright content" > 4n6shetty(at)pm(dot)me`
