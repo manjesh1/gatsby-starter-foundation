@@ -5,8 +5,9 @@ title: Setting up Darkweb Monitoring using Onionscan deployed in Virtual Private
 slug: /Setting up Darkweb Monitoring using Onionscan deployed in Virtual Private
   Server
 date: 2020-05-23 23:40
-description: ddd
-featuredImage: ""
+description: Setting up Darkweb Monitoring using Onionscan deployed in Virtual
+  Private Server
+featuredImage: /assets/web-2592005_1920.jpg
 ---
 ### When it comes to Dark web OSINT tool, I would recommend Onionscan tool which is free and open source tool, written in GO language & it checks for onion website vulnerabilities, misconfiguration etc.,
 
@@ -140,10 +141,61 @@ You can download it from below repo link using wget command.
 
 Link: <https://raw.githubusercontent.com/4n6shetty/Darkweb_OnionScan/main/OnionScannerPython3>
 
-
-
 ```
 wget https://raw.githubusercontent.com/4n6shetty/Darkweb_OnionScan/main/OnionScannerPython3
 ```
 
 ![](/assets/screenshot_30.png)
+
+Now you need to modify the TOR configuration to allow our Automated Python script to request a new IP address, please follow below command:
+
+```
+tor --hash-password Mozshetty
+```
+
+![](/assets/screenshot_28.png)
+
+**Mozshetty** is the password which will authenticate to the Tor controller (Refer PythonScript Codeline: ), you can always use your own password but make sure that you update in python script.
+
+Now you need to open Tor Configuration file to add the Local Tor Controller port and password to authenticate the controller for requesting new identity.
+
+```
+nano -w /etc/tor/torrc
+```
+
+**Add below code at the bottom and save the file.**
+
+`
+ControlPort 9051`
+
+`
+ControlListenAddress 127.0.0.1`
+
+`
+HashedControlPassword 16:101E5D7DF75EF8166007903672136AAC460422C2F8BB256F18DFED6E32`
+
+``
+
+![](/assets/screenshot_29.png)
+
+**Now all you need to do is to restart the Tor by typing below command.**
+
+```shell
+service tor restart
+```
+
+Now, we have almost reached to the last step, that is creating onion link repo, I have created by own .onion repo list which includes popular drug marketplace (Ex: darkode reborn, Blackhole, silkroad mirror etc.,) and .onion directories, make sure that you update the .onion repo list file name in the python script (Refer Code Line: )
+
+![](/assets/screenshot_35.png)
+
+
+
+
+
+**Finally, Its time to run our onionscan python script and output is stored in JSON format in the folder called onionscan_results.**
+
+```shell
+Python3 OnionScannerPython3
+```
+
+![](/assets/screenshot_34.png)
