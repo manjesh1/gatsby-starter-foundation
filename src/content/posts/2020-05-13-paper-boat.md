@@ -39,21 +39,111 @@ I would like to select digital ocean platform to run our tool, so follow below i
 
 ![](/assets/screenshot_15.png)
 
-
-
-
-
 ### *2.* Installation of Onionscan tool and dependencies in the VPN server
 
 First and foremost, you need to do is to connect your VPN server.
-
-
 
 > ```shell
 > ssh root@public_ip
 > ```
 
-
 *Note: You can connect the VPN Server using SSH in the terminal if your using Mac/Linux Platform. Incase if your using windows 10 machine you can enable Linux Sub-system or SSH App*
 
-As I have connected to my VPN machine, now I need to download the pre-requisties which are required for downloading Onionscan. You can refer official page to check the dependencies for the onion_scan.
+![](/assets/screenshot_16.png)
+
+As I have connected to my VPN machine, now I need to download the pre-requisites which are required for downloading Onionscan. You can refer official page to check the dependencies for the onion_scan.
+
+Before you download onioscan dependencies, make sure that you got python and TOR installed on your machine, if not please type below commands.
+
+```shell
+apt-get update
+
+apt-get install tor git bison libexif-dev
+
+apt-get install python3-pip
+
+pip3 install stem
+```
+
+![](/assets/screenshot_19.png)
+
+*Stem is a Python controller library that allows our application to interact with Tor.*
+
+#### Now you need to download of installing the latest version of Go
+
+**Step1: Visit the official Go downloads page and find the version for the current binary release’s tarball and download it using curl command line utility.**
+
+```shell
+curl -O https://dl.google.com/go/go1.10.16.linux-amd64.tar.gz
+```
+
+![](/assets/screenshot_23.png)
+
+**Step2: Extract the Tarball**
+
+```shell
+tar xvf go1.10.16.linux-amd64.tar.gz
+```
+
+**Step 3: Change the permission and move the file to local**
+
+```shell
+sudo chown -R root:root ./go
+sudo mv go /usr/local
+```
+
+**Step 4:  Now set-up go path.**
+
+```shell
+sudo nano ~/.profile
+```
+
+**Add the following below line at the end.**
+
+`export GOPATH=$HOME/work`
+
+`export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin`
+
+``
+
+``
+
+![](/assets/screenshot_24.png)
+
+**Step 5: Now refresh the profile and check the version of Go**
+
+```
+source ~/.profile
+```
+
+![](/assets/screenshot_25.png)
+
+### Installation of Onionscan
+
+Now we have installed GO, now we can easily download the onionscan from below repository
+
+```
+go get github.com/s-rah/onionscan
+
+go install github.com/s-rah/onionscan@latest
+```
+
+![](/assets/screenshot_27.png)
+
+Now we have successfully installed Onionscan!!
+
+### 3. Python script to automate the tool
+
+Thanks to the author of Automatingosint, who has created onionscan automated python script which will kill a stuck onionscan process and grab a fresh IP address from the TOR network and  I have made small modification on the script and converted into python3 version.
+
+You can download it from below repo link using wget command.
+
+Link: <https://raw.githubusercontent.com/4n6shetty/Darkweb_OnionScan/main/OnionScannerPython3>
+
+
+
+```
+wget https://raw.githubusercontent.com/4n6shetty/Darkweb_OnionScan/main/OnionScannerPython3
+```
+
+![](/assets/screenshot_30.png)
