@@ -188,4 +188,4 @@ Python3 OnionScannerPython3
 
 
 
-You can always reach out to me via email > 4n6shetty(at)pm(at).me
+You can always reach out to me via email > 4n6shetty(at)pm(dot)me
