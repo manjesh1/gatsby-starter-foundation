@@ -8,7 +8,7 @@ description: Setting up Darkweb Monitoring using Onionscan deployed in Virtual
   Private Server
 featuredImage: /assets/web-2592005_1920.jpg
 ---
-### When it comes to Dark web OSINT tool, I would recommend Onionscan tool which is free and open source tool, written in GO language & it checks for onion website vulnerabilities, misconfiguration etc.,
+When it comes to Dark web OSINT tool, I would recommend Onionscan tool which is free and open source tool, written in GO language & it checks for onion website vulnerabilities, misconfiguration etc.,
 
 * It queries apache server mod_status to find any leaking information in the server like IP Address or hosted server.
 * It also checks for open directories and even in backup copies of the website.
@@ -154,7 +154,7 @@ tor --hash-password Mozshetty
 
 ![](/assets/screenshot_28.png)
 
-**Mozshetty** is the password which will authenticate to the Tor controller (Refer PythonScript Codeline: ), you can always use your own password but make sure that you update in python script.
+**Mozshetty** is the password which will authenticate to the Tor controller (Refer PythonScript Codeline: 96 ), you can always use your own password but make sure that you update in python script.
 
 Now you need to open Tor Configuration file to add the Local Tor Controller port and password to authenticate the controller for requesting new identity.
 
@@ -164,14 +164,11 @@ nano -w /etc/tor/torrc
 
 **Add below code at the bottom and save the file.**
 
-`
-ControlPort 9051`
+`ControlPort 9051`
 
-`
-ControlListenAddress 127.0.0.1`
+`ControlListenAddress 127.0.0.1`
 
-`
-HashedControlPassword 16:101E5D7DF75EF8166007903672136AAC460422C2F8BB256F18DFED6E32`
+`HashedControlPassword 16:101E5D7DF75EF8166007903672136AAC460422C2F8BB256F18DFED6E32`
 
 ``
 
@@ -183,18 +180,18 @@ HashedControlPassword 16:101E5D7DF75EF8166007903672136AAC460422C2F8BB256F18DFED6
 service tor restart
 ```
 
-Now, we have almost reached to the last step, that is creating onion link repo, I have created by own .onion repo list which includes popular drug marketplace (Ex: darkode reborn, Blackhole, silkroad mirror etc.,) and .onion directories, make sure that you update the .onion repo list file name in the python script (Refer Code Line: )
+Now, we have almost reached to the last step, that is creating onion link repo, I have created by own .onion repo list which includes popular drug marketplace (Ex: darkode reborn, Blackhole, silkroad mirror etc.,) and .onion directories, make sure that you update the .onion repo list file name in the python script (Refer Code Line: 26, 28)
 
 ![](/assets/screenshot_35.png)
 
-
-
-
-
-**Finally, Its time to run our onionscan python script and output is stored in JSON format in the folder called onionscan_results.**
+Finally, Its time to run our onionscan python script and output is stored in JSON format in the folder called onionscan_results and most important thing is don't forget to use `SCREEN `command before running the script so that scanning process keeps running even if you get disconnected from the server.
 
 ```shell
 Python3 OnionScannerPython3
 ```
 
 ![](/assets/screenshot_34.png)
+
+
+
+You can always reach out to me via email > 4n6shetty(at)pm(at).me
