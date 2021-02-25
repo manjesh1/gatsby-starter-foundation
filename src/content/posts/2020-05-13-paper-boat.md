@@ -104,10 +104,6 @@ sudo nano ~/.profile
 
 `export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin`
 
-``
-
-``
-
 ![](/assets/screenshot_24.png)
 
 **Step 5: Now refresh the profile and check the version of Go**
@@ -169,8 +165,6 @@ nano -w /etc/tor/torrc
 `ControlListenAddress 127.0.0.1`
 
 `HashedControlPassword 16:101E5D7DF75EF8166007903672136AAC460422C2F8BB256F18DFED6E32`
-
-``
 
 ![](/assets/screenshot_29.png)
 
