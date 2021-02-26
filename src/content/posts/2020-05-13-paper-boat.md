@@ -3,7 +3,7 @@ template: blog-post
 title: Setting up Darkweb Monitoring using Onionscan deployed in Virtual Private
   Server
 slug: /Setting-up-Darkweb-Monitoring-using-Onionscan-deployed-in-Virtual-Private-Server
-date: 2020-05-23 23:40
+date: 2021-02-25 23:40
 description: Setting up Darkweb Monitoring using Onionscan deployed in Virtual
   Private Server
 featuredImage: /assets/web-2592005_1920.jpg
