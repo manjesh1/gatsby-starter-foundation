@@ -95,6 +95,8 @@ Advantages of NT over LANMAN is Case sensitivity is preserved by then no salts i
 
 In next article lets learn more about obtaining and cracking windows password hashes using meterpreter.
 
+Thanks to the training on SANS Sec504 which made me write article on this concept!
+
 Cheers,
 
 MozShetty
