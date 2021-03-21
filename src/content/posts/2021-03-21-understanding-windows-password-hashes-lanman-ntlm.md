@@ -12,7 +12,7 @@ So, what is Hashing Process?
 
 Hashing is the process that converting an input of any length characters into a fixed-size string of text (Hash Value). Hashing is one-way road to enhance the security in other words *“It is one-way function, the data that is hashed cannot be unhashed/reversed practically”.*
 
-The process of hashing varied from system to system, so let’s dive into Windows & Linux Operating System.
+The process of hashing varied from system to system, so let’s dive into Windows Operating System.
 
 **Windows use below hashing Function:** LANMAN, NTLM
 
