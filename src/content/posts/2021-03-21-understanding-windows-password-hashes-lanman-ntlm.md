@@ -1,9 +1,9 @@
 ---
 template: blog-post
-title: "Understanding Windows Password Hashes: LANMAN & NTLM "
+title: "Understanding Windows Password Hashes: LANMAN & NT"
 slug: /Understanding-Windows-Password-Hashes
 date: 2021-03-21 18:43
-description: "Understanding Windows Password Hashes: LANMAN & NTLM "
+description: "Understanding Windows Password Hashes: LANMAN & NT"
 featuredImage: /assets/lock-5881443_1920.jpg
 ---
 In world of security, storing password in the back-end database in plaintext is a security design failure as plain text is easily readable by the humans, to overcome this loophole internal application developers use hashing techniques to protect the password from hackers incase of breach of database. These hashes are stored in the local SAM database or Active Directory.
@@ -61,7 +61,7 @@ LAN Manager (LANMAN) password hash is very weak and legacy password hashing mech
 3. Password is stored in two chuck of 7 byte it is easy for the attacker to recover plain text.
 
 **NT Hashes:**
-Modern windows system use NTLM password hashes, although it is considered as strongest password it doesn’t use salt on other hand we can say its better then LANMAN hashes but not so great in terms of security perspective.
+Modern windows system use NT password hashes, although it is considered as strongest password it doesn’t use salt on other hand we can say its better then LANMAN hashes but not so great in terms of security perspective.
 
 ![NT hashing Process](/assets/14.png "NT hashing Process")
 
@@ -79,7 +79,7 @@ So lets learn how NT hashes mechanism works;
 
 **Step 3:** Encrypted using RC4 or AES-CBC-128 in SAM.
 
-Advantages of NTLM over LANMAN is Case sensitivity is preserved by then no salts is used in NT Hashes, it is prone to pre-computed hashed dictionary attacks.
+Advantages of NT over LANMAN is Case sensitivity is preserved by then no salts is used in NT Hashes, it is prone to pre-computed hashed dictionary attacks.
 
 > *The simplest way is to use a password that's at least 15 characters long so that No LANMAN has stored only NT hash is used for local authentication.*
 
